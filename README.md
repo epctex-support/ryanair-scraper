@@ -16,7 +16,7 @@ This scraper is under active development. If you have any feature requests you c
 
 ## Input Parameters
 
-The input of this scraper should be JSON containing the list of pages on Aliexpress that should be visited. Required fields are:
+The input of this scraper should be JSON containing. Required fields are:
 
 | Field | Type | Description |
 | ----- | ---- | ----------- |
