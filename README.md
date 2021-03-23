@@ -12,7 +12,7 @@ The Ryanair data scraper supports the following features:
 
 
 ## Bugs, fixes, updates and changelog
-This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/tugkan/ryanair-scraper).
+This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/tugkan/ryanair-scraper/issues).
 
 ## Input Parameters
 
