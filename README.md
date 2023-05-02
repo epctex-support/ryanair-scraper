@@ -14,32 +14,31 @@ The Ryanair data scraper supports the following features:
 
 This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/epctex/ryanair-scraper/issues).
 
-## Setup & Usage
-
-You can see how this actor works in this video:
-
-[![Apify - Ryanair Scraper](https://img.youtube.com/vi/grCuIZT1n8g/0.jpg)](https://www.youtube.com/watch?v=grCuIZT1n8g)
-
-You can check the output of this video [here](https://api.apify.com/v2/datasets/3uQoKgcRuojbDsmJi/items?clean=true&format=json).
-
 ## Input Parameters
 
-The input of this scraper should be JSON containing. Required fields are:
+The input of this scraper should be JSON containing. Possible fields are:
 
-| Field            | Type    | Description                                                                                                                                                                                                                                                     |
-| ---------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| mode             | String  | Mode for the actor. It can be either `ROUND` for Round trip or `ONEWAY` for One way trips.                                                                                                                                                                      |
-| origin           | String  | 3-letter origin airport code. Ex: VIE                                                                                                                                                                                                                           |
-| destination      | String  | 3-letter destination airport code. Ex: VIE                                                                                                                                                                                                                      |
-| departureDate    | String  | Date for departure. Should be in the format of `YYYY-MM-DD`. Ex: 2021-02-21                                                                                                                                                                                     |
-| departureDate    | String  | Date for return. It is required for Round trips. Should be in the format of `YYYY-MM-DD`. Ex: 2021-02-21                                                                                                                                                        |
-| adults           | Integer | Number of adults that will be included on the flight. Minimum number is 1.                                                                                                                                                                                      |
-| teens            | Integer | (optional) Number of teens (12-15 years old) that will be included on the flight.                                                                                                                                                                               |
-| children         | Integer | (optional) Number of children (2-11 years old) that will be included on the flight.                                                                                                                                                                             |
-| infants          | Integer | (optional) (optional) Number of teens (Under 2 years old) that will be included on the flight.                                                                                                                                                                  |
-| maxItems         | Integer | (optional) You can limit scraped products. Default is `Infinite`.                                                                                                                                                                                               |
-| proxy            | Object  | Proxy configuration                                                                                                                                                                                                                                             |
-| requestExtension | JSON    | (optional) This object is an extension that can be applied to [@apify/http-request](https://www.npmjs.com/package/@apify/http-request) package. It is extending the options of the request. Must be handle in care and should be handle only for advanced users |
+- `mode`: (Required) (String) Mode for the actor. It can be either `ROUND` for Round trip or `ONEWAY` for One way trips.
+
+- `origin`: (Required) (String) 3-letter destination airport code. Ex: VIE.
+
+- `destination`: (Required) (String) Mode for the actor. It can be either `ROUND` for Round trip or `ONEWAY` for One way trips.
+
+- `departureDate`: (Required) (String) Date for departure. Should be in the format of `YYYY-MM-DD`. Ex: 2021-02-21.
+
+- `returnDate`: (Optional) (String) Date for return. It is required for Round trips. Should be in the format of `YYYY-MM-DD`. Ex: 2021-02-21.
+
+- `adults`: (Required) (Number) Number of adults that will be included on the flight. Minimum number is 1.
+
+- `teens`: (Optional) (Number) Number of teens (12-15 years old) that will be included on the flight.
+
+- `children`: (Optional) (Number) Number of children (2-11 years old) that will be included on the flight.
+
+- `infants`: (Optional) (Number) Number of teens (Under 2 years old) that will be included on the flight.
+
+- `maxItems`: (Optional) (Number) You can limit scraped items. This should be useful when you search through the big lists or search results.
+
+- `proxy`: (Required) (Proxy Object) Proxy configuration.
 
 This solution requires the use of **Proxy servers**, either your own proxy servers or you can use <a href="https://www.apify.com/docs/proxy">Apify Proxy</a>.
 
