@@ -1,34 +1,36 @@
+[https://apify.com/epctex/ryanair-scraper](https://apify.com/epctex/ryanair-scraper?fpr=yhdrb)
+
 # Actor - Ryanair Scraper
 
 ## Ryanair scraper
 
-Since Ryanair doesn't provide an good API, this actor should help you to retrieve data from it.
+Since Ryanair doesn't provide a good API, this actor should help you to retrieve data from it.
 
 The Ryanair data scraper supports the following features:
 
 -   Scrape round trip - you can scrape a complete round trip with departure and return dates.
--   Scrape one way trip - you can scrape an one way trip with just providing the departure date
--   Scrape with multiple people options - You can scrape Ryanair with Adults, Teens, Children and Infants options
+-   Scrape one-way trip - you can scrape a one way trip by just providing the departure date
+-   Scrape with multiple people options - You can scrape Ryanair with Adults, Teens, Children, and Infants options
 
-## Bugs, fixes, updates and changelog
+## Bugs, fixes, updates, and changelog
 
 This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/epctex/ryanair-scraper/issues).
 
 ## Input Parameters
 
-The input of this scraper should be JSON containing. Possible fields are:
+The input of this scraper should be JSON-containing. Possible fields are:
 
-- `mode`: (Required) (String) Mode for the actor. It can be either `ROUND` for Round trip or `ONEWAY` for One way trips.
+- `mode`: (Required) (String) Mode for the actor. It can be either `ROUND` for Round trip or `ONEWAY` for One-way trips.
 
 - `origin`: (Required) (String) 3-letter destination airport code. Ex: VIE.
 
-- `destination`: (Required) (String) Mode for the actor. It can be either `ROUND` for Round trip or `ONEWAY` for One way trips.
+- `destination`: (Required) (String) Mode for the actor. It can be either `ROUND` for Round trip or `ONEWAY` for One-way trips.
 
 - `departureDate`: (Required) (String) Date for departure. Should be in the format of `YYYY-MM-DD`. Ex: 2021-02-21.
 
 - `returnDate`: (Optional) (String) Date for return. It is required for Round trips. Should be in the format of `YYYY-MM-DD`. Ex: 2021-02-21.
 
-- `adults`: (Required) (Number) Number of adults that will be included on the flight. Minimum number is 1.
+- `adults`: (Required) (Number) Number of adults that will be included on the flight. The minimum number is 1.
 
 - `teens`: (Optional) (Number) Number of teens (12-15 years old) that will be included on the flight.
 
@@ -44,7 +46,7 @@ This solution requires the use of **Proxy servers**, either your own proxy serve
 
 ### Compute Unit Consumption
 
-The actor optimized to run in a very fast manner and scrape the flights in the most performant way. Therefore, it forefronts all flight result requests. If actor doesn't block very often it'll scrape 10 flights in 3 seconds with ~0.005-0.01 compute units.
+The actor is optimized to run in a very fast manner and scrape the flights in the most performant way. Therefore, it forefronts all flight result requests. If the actor doesn't block very often it'll scrape 10 flights in 3 seconds with ~0.005-0.01 compute units.
 
 ### Ryanair Scraper Input example
 
@@ -70,13 +72,13 @@ The actor optimized to run in a very fast manner and scrape the flights in the m
 During the run, the actor will output messages letting you know what is going on.
 When items are loaded from the page, you should see a message about this event with a loaded item count.
 
-If you provide incorrect input to the actor, it will immediately stop with failure state and output an explanation of what is wrong.
+If you provide incorrect input to the actor, it will immediately stop with a failure state and output an explanation of what is wrong.
 
 ## Ryanair Export
 
 During the run, the actor stores results into a dataset. Each item is a separate item in the dataset.
 
-You can manage the results in any languague (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this Ryanair actor.
+You can manage the results in any language (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this Ryanair actor.
 
 ## Scraped Ryanair Flights
 
@@ -175,4 +177,4 @@ The structure of each item in Ryanair flights looks like this:
 ```
 
 ## Contact
-Please visit us through [epctex.com](https://epctex.com) to see all the products that is available for you. If you are looking for any custom integration or so, please reach out to us through the chat box in [epctex.com](https://epctex.com). In need of support? [devops@epctex.com](mailto:devops@epctex.com) is at your service.
+Please visit us through [epctex.com](https://epctex.com) to see all the products that are available for you. If you are looking for any custom integration or so, please reach out to us through the chat box in [epctex.com](https://epctex.com). In need of support? [devops@epctex.com](mailto:devops@epctex.com) is at your service.
